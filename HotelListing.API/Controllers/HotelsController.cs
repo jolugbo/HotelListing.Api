@@ -57,7 +57,7 @@ namespace HotelListing.API.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            var toBeDeleted = hotels.FirstOrDefault(x => x.Id == id);
+            var toBeDeleted = hotels.FirstOrDefault(x => x.Id == id); 
             if (toBeDeleted == null)
                 return NotFound(new { message = "Hotel not found" } );
             hotels.Remove(toBeDeleted);
